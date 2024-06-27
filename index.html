@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <!-- outer div for better design -->
+  <div class="outer" id="login_container">
+    <h1>Login Here</h1>
+    <h4>Note App storage</h4>
+    <!-- Form Started here -->
+    <div class="inner">
+        <div  >
+        
+        <p><input class="in" id="userName" type="text" placeholder="Type your Name" autofocus /><i class="fa-solid fa-user" ></i></p>
+
+        <p><input class="in" id="email" type="email" placeholder="Type your Email" autofocus/><i class="fa-solid fa-user"></i></p>
+        
+        <p><input class="in" id="password" type="password" placeholder="Type your Password" autofocus/><i class="fa-solid fa-lock"></i></p>
+        
+        <!-- <p>Already have an account <a href="#">Forget Password?</a></p> -->
+        <!-- To do: normal login button with animating border -->
+        <p><input class="btn" type="submit" value="Submit"  onclick="login()"/></p>
+    </div>
+    </div>
+</div>
+  
+    <div class="home_container  overflow-x-hidden ">
+
+        <div class="flex flex-wrap bg-blue-400  py-2 mt-[5%] p-1 justify-around items-center w-screen my-4">
+
+            <div>
+                <p id="showname">welcome to my app </p>
+                
+            </div>
+            <p id="showEmail">Email or vinod  </p>
+            <button onclick="logout()" class="bg-green-500 hover:bg-green-400 px-8 p-1">Logout</button>
+        </div>
+
+        <div>
+            <textarea name="" id="textarea" cols="60" rows="9" class="bg-green-400 font-mono font-semibold p-3 ml-6" placeholder="Enter Your Text" autofocus></textarea><br>
+
+            <button onclick="AddNote()" class="bg-blue-600 px-12 hover:bg-blue-400 py-2 shadow-lg ml-6">Add</button>
+
+        </div>
+
+        <div  class="w-full overflow-y-auto h-44" id="storeResult">
+            
+        </div>
+
+    </div>
+
+
+    <script src="note.js"></script>
+</body>
+</html>
